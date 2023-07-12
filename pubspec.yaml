@@ -1,12 +1,12 @@
 name: mu_scaling_system
 description: Make your design adaptive for all screens using mu system
-version: 0.1.0
+version: 0.1.1
 homepage: https://pub.dev/packages/mu_scaling_system
 repository: https://github.com/meg4cyberc4t/mu_scaling_system
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: ">=3.10.0"
+  sdk: '>=2.17.0 <4.0.0'
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
