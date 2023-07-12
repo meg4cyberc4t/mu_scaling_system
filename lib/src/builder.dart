@@ -31,7 +31,6 @@ class _MuScalingBuilderState extends State<MuScalingBuilder> {
   @override
   void didUpdateWidget(covariant MuScalingBuilder oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print('didUpdateWidget');
     MuScaleSystem.instance.updateConditions(
       widget.conditions,
       defaultValue: widget.defaultValue,
