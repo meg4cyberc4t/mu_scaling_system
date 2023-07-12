@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/meg4cyberc4t/mu_scaling_system/.github/icon.png" style="border-radius: 20px" height=100/>
+  <img src="https://raw.githubusercontent.com/meg4cyberc4t/mu_scaling_system/main/.github/icon.png" style="border-radius: 20px" height=100/>
   <br />
   <h1>Mu Scaling System</h1>
   <h3>Make your design adaptive for all screens using Mu system</h3>
 </div>
 
-<img src="https://raw.githubusercontent.com/meg4cyberc4t/mu_scaling_system/.github/preview.png" style="border-radius: 4%;max-height:500px"/>
+<img src="https://raw.githubusercontent.com/meg4cyberc4t/mu_scaling_system/main/.github/preview.png" style="border-radius: 4%;max-height:500px"/>
 
 ### How it works?
 
