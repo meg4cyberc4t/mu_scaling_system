@@ -1,7 +1,7 @@
 library mu_scaling_system;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/builder.dart';
+export 'src/conditions.dart';
+export 'src/extensions/num_extension.dart';
+export 'src/extensions/text_style_extension.dart';
+export 'src/extensions/text_theme_extension.dart';
