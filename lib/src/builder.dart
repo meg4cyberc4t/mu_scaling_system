@@ -2,6 +2,15 @@ import 'package:flutter/widgets.dart';
 import 'package:mu_scaling_system/src/conditions.dart';
 import 'package:mu_scaling_system/src/system.dart';
 
+/// The main Builder for calculating Mu.
+/// Pass [conditions] to it, according to which
+/// Mu will be calculated, as well as [defaultValue],
+/// if none of the conditions are suitable.
+///
+/// Important:
+/// MuScalingBuilder must be up to MaterialApp,
+/// CupertinoApp or WidgetsApp,
+/// otherwise the design will not be adaptive to the screen size!
 class MuScalingBuilder extends StatefulWidget {
   final Widget child;
   final List<MuCondition> conditions;

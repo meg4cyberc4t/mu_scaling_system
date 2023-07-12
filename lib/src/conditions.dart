@@ -1,5 +1,8 @@
 import 'package:flutter/widgets.dart';
 
+/// Conditions for calculating Mu.
+/// If the condition should not return mu, return null.
+/// Used in [MuScalingBuilder].
 class MuCondition {
   late final int? Function(MediaQueryData mediaQueryData) condition;
 

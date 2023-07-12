@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/widgets.dart';
 import 'package:mu_scaling_system/src/conditions.dart';
 
+/// Not part of the public api
 class MuScaleSystem {
   static final MuScaleSystem instance = MuScaleSystem._();
 
