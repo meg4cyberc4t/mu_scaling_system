@@ -3,7 +3,7 @@
   <br />
   <h1>Mu Scaling System</h1>
   <h3>Make your design adaptive for all screens using Mu system</h3>
-</br>
+</div>
 
 <img src=".github/preview.png" style="border-radius: 4%;max-height:500px"/>
 
@@ -27,7 +27,7 @@ In total, the specified number of Mu on tablets will be larger, which is why the
         If Mu finds a condition, it takes a value from it.
         If all the conditions do not fit, Mu is set to defaultValue.
 
-Ex:
+Example:
 ```dart
 MuScalingBuilder(
     conditions: [
@@ -41,9 +41,9 @@ MuScalingBuilder(
         minShortestSide: 800,
         maxShortestSide: 1500,
     ),
-    ],
-    defaultValue: 4,
-    child: const MyApp(),
+  ],
+  defaultValue: 4,
+  child: const MyApp(),
 ),
 ```
 
