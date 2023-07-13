@@ -1,6 +1,10 @@
+## 0.1.2
+
+* Export MyScaleSystem as an alternative option MuScalingBuilder.
+
 ## 0.1.1
 
-* Added documentation to the main components
+* c to the main components
 * The Dart SDK version has been downgraded to 2.17.0, Flutter SDK to 3.0.0
 
 ## 0.1.0
