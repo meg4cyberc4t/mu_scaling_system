@@ -15,7 +15,46 @@ This library solves the problem as follows.
 Depending on the screen data, you specify a common unit of measurement - Mu. Depending on the screen magnification, you increase the Mu. As a result, almost all widget size actions should be based on Mu.
 In total, the specified number of Mu on tablets will be larger, which is why the entire interface will be larger, but since everything depends on Mu, it will be proportional.
 
-### How to use it?
+### How to prepare it?
+
+#### Option with manual calculation of Mu.
+1. Call `MuScaleSystem.instance.updateConditions()` before MaterialApp,  Pass a arguments:
+* conditions - list of conditions for Mu.
+* defaultValue - value of Mu if all conditions do not fit.
+
+        The conditions work like this:
+        Mu is calculated by going through each condition sequentially in the list.
+        If Mu finds a condition, it takes a value from it.
+        If all the conditions do not fit, Mu is set to defaultValue.
+2. Call `MuScaleSystem.instance.updateScaleCalculations()` before MaterialApp, pass a BuildContext.
+
+Example: 
+```dart
+runApp(
+  Builder(
+    builder: (BuildContext context) {
+      MuScaleSystem.instance.updateConditions(
+        <MuCondition>[
+          MuCondition.side(
+            minShortestSide: 800,
+            minLongestSide: 1500,
+            mu: 5,
+          ),
+          MuCondition.side(
+            minShortestSide: 1500,
+            mu: 6,
+          ),
+        ],
+        defaultValue: 4,
+      );
+      MuScaleSystem.instance.updateScaleCalculations(context);
+      return YourApp();
+    },
+  ),
+);
+```
+
+#### Option with auto calculation using MuScalingBuilder:
 
 1. Wrap your MaterialApp in MuScalingBuilder.
 2. Pass a arguments in MuScalingBuilder:
@@ -30,7 +69,7 @@ In total, the specified number of Mu on tablets will be larger, which is why the
 Example:
 ```dart
 MuScalingBuilder(
-    conditions: [
+  conditions: [
     MuCondition.side(
         mu: 4,
         minShortestSide: 400,
@@ -47,23 +86,28 @@ MuScalingBuilder(
 ),
 ```
 
-3. Use Mu for widgets with num extension:
+### How to use it?
+
+
+Use Mu for widgets with num extension:
 ```dart
 SizedBox(
     height: 8.mu,
 ),
 ```
 
-4. Use Mu for TextStyle or TextTheme with extensions:
+
+Use Mu for TextStyle or TextTheme with extensions:
 ```dart
 TextStyle(fontSize: 14).scale((fontSize, mu) => fontSize * mu / 3.5);
 TextTheme().scale((fontSize, mu) => fontSize * mu / 3.5);
 ```
+
 Important points:
 * The function for adapting the size of the text style is not general, you can do your own. It exists in order to adjust the size of the text to Mu, but not to make the text out of size.
 * .scale() cannot be used if TextStyle does not have font Size set. (If you want to use out of the box, I recommend the Typography class).
 
-5. Enjoy!
+Enjoy!
 
 
 ### Contributing 
