@@ -1,3 +1,7 @@
+## 0.1.3
+
+* Fix: MuScalingBuilder was rebuilt with each size change
+
 ## 0.1.2
 
 * Export MyScaleSystem as an alternative option MuScalingBuilder.

@@ -53,8 +53,5 @@ class _MuScalingBuilderState extends State<MuScalingBuilder> {
   }
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-        key: ObjectKey(MediaQuery.of(context)),
-        child: widget.child,
-      );
+  Widget build(BuildContext context) => widget.child;
 }
